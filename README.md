@@ -52,4 +52,4 @@ Aplikasi ini dikembangkan menggunakan **Kotlin** dan **XML Material Design Compo
 * **UI Layout:** XML (ConstraintLayout, Material CardView, MaterialButton)
 * **Design Theme:** Custom Pastel Pink Palette (`#F8EBF0`, `#2D1F23`, `#E1BEE7`)
 * **Fonts:** Serif Typeface
-* **Target Device:** Android (Samsung Galaxy A10s Compatible)
+* **Target Device:** Android 
