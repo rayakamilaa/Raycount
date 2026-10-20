@@ -1,4 +1,4 @@
-# 🌸 Raycount - Classy & Aesthetic Pastel Pink Calculator App
+# 🌸 Rayc0unt - Calculator App
 
 **Raycount** adalah aplikasi kalkulator multifungsi berbasis Android yang dirancang dengan antarmuka pengguna (*UI*) bernuansa *soft pastel pink*, bergaya minimalis, bersih, dan elegan. 
 
@@ -26,9 +26,6 @@ Aplikasi ini dikembangkan menggunakan **Kotlin** dan **XML Material Design Compo
 
 ---
 
-## 📸 Tampilan Aplikasi (Screenshots)
-
-## 📸 Tampilan Aplikasi (Screenshots)
 
 ## 📸 Tampilan Aplikasi (Screenshots)
 
