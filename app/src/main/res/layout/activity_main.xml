@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_pink"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- Header atas: Logo & Tombol Navigasi Timbul -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- Logo Rayc[÷]unt -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:text="Rayc"
+                android:textColor="@color/text_dark"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp"
+                android:contentDescription="Logo O"
+                android:src="@drawable/ic_logo_o" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:text="unt"
+                android:textColor="@color/text_dark"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Tombol Pintasan Diskon % -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnOpenDiscount"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginEnd="6dp"
+            android:backgroundTint="@color/btn_mint"
+            android:text="Diskon %"
+            android:textColor="@color/text_mint_dark"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:cornerRadius="20dp"
+            app:elevation="4dp"
+            app:strokeColor="@color/btn_stroke"
+            app:strokeWidth="1dp" />
+
+        <!-- Tombol Pintasan Kurs IDR -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnOpenCurrency"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:backgroundTint="@color/btn_pink_soft"
+            android:text="Kurs IDR"
+            android:textColor="@color/text_dark"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:cornerRadius="20dp"
+            app:elevation="4dp"
+            app:strokeColor="@color/btn_stroke"
+            app:strokeWidth="1dp" />
+    </LinearLayout>
+
+    <!-- Screen Display (Kartu Timbul) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_display_card"
+        android:elevation="6dp"
+        android:gravity="end|bottom"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tvExpression"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_expression"
+            android:textColor="@color/text_sub"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/default_result"
+            android:textColor="@color/text_dark"
+            android:textSize="42sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Calculator Buttons Grid (Dengan Bayangan Soft Timbul / Elevation) -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*">
+
+        <!-- Row 1 -->
+        <TableRow android:layout_marginBottom="12dp">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnC"
+                android:layout_width="0dp"
+                android:layout_height="68dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/btn_mint"
+                android:text="@string/btn_clear"
+                android:textColor="@color/text_mint_dark"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:cornerRadius="34dp"
+                app:elevation="6dp"
+                app:strokeColor="@color/btn_stroke"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPlusMinus"
+                android:layout_width="0dp"
+                android:layout_height="68dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/btn_pink_soft"
+                android:text="@string/btn_plus_minus"
+                android:textColor="@color/text_dark"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:cornerRadius="34dp"
+                app:elevation="6dp"
+                app:strokeColor="@color/btn_stroke"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPercent"
+                android:layout_width="0dp"
+                android:layout_height="68dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/btn_pink_soft"
+                android:text="@string/btn_percent"
+                android:textColor="@color/text_dark"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:cornerRadius="34dp"
+                app:elevation="6dp"
+                app:strokeColor="@color/btn_stroke"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDivide"
+                android:layout_width="0dp"
+                android:layout_height="68dp"
+                android:backgroundTint="@color/btn_mint"
+                android:text="@string/btn_divide"
+                android:textColor="@color/text_mint_dark"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:cornerRadius="34dp"
+                app:elevation="6dp"
+                app:strokeColor="@color/btn_stroke"
+                app:strokeWidth="1dp" />
+        </TableRow>
+
+        <!-- Row 2 -->
+        <TableRow android:layout_marginBottom="12dp">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn7"
+                android:layout_width="0dp"
+                android:layout_height="68dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/btn_pink_num"
+                android:text="@string/btn_7"
+                android:textColor="@color/text_dark"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:cornerRadius="34dp"
+                app:elevation="6dp"
+                app:strokeColor="@color/btn_stroke"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn8"
+                android:layout_width="0dp"
+                android:layout_height="68dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/btn_pink_num"
+                android:text="@string/btn_8"
+                android:textColor="@color/text_dark"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:cornerRadius="34dp"
+                app:elevation="6dp"
+                app:strokeColor="@color/btn_stroke"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn9"
+                android:layout_width="0dp"
+                android:layout_height="68dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/btn_pink_num"
+                android:text="@string/btn_9"
+                android:textColor="@color/text_dark"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:cornerRadius="34dp"
+                app:elevation="6dp"
+                app:strokeColor="@color/btn_stroke"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMultiply"
+                android:layout_width="0dp"
+                android:layout_height="68dp"
+                android:backgroundTint="@color/btn_purple"
+                android:text="@string/btn_multiply"
+                android:textColor="@color/text_dark"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:cornerRadius="34dp"
+                app:elevation="6dp"
+                app:strokeColor="@color/btn_stroke"
+                app:strokeWidth="1dp" />
+        </TableRow>
+
+        <!-- Row 3 -->
+        <TableRow android:layout_marginBottom="12dp">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn4"
+                android:layout_width="0dp"
+                android:layout_height="68dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/btn_pink_num"
+                android:text="@string/btn_4"
+                android:textColor="@color/text_dark"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:cornerRadius="34dp"
+                app:elevation="6dp"
+                app:strokeColor="@color/btn_stroke"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn5"
+                android:layout_width="0dp"
+                android:layout_height="68dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/btn_pink_num"
+                android:text="@string/btn_5"
+                android:textColor="@color/text_dark"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:cornerRadius="34dp"
+                app:elevation="6dp"
+                app:strokeColor="@color/btn_stroke"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn6"
+                android:layout_width="0dp"
+                android:layout_height="68dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/btn_pink_num"
+                android:text="@string/btn_6"
+                android:textColor="@color/text_dark"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:cornerRadius="34dp"
+                app:elevation="6dp"
+                app:strokeColor="@color/btn_stroke"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMinus"
+                android:layout_width="0dp"
+                android:layout_height="68dp"
+                android:backgroundTint="@color/btn_purple"
+                android:text="@string/btn_minus"
+                android:textColor="@color/text_dark"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:cornerRadius="34dp"
+                app:elevation="6dp"
+                app:strokeColor="@color/btn_stroke"
+                app:strokeWidth="1dp" />
+        </TableRow>
+
+        <!-- Row 4 -->
+        <TableRow android:layout_marginBottom="12dp">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn1"
+                android:layout_width="0dp"
+                android:layout_height="68dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/btn_pink_num"
+                android:text="@string/btn_1"
+                android:textColor="@color/text_dark"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:cornerRadius="34dp"
+                app:elevation="6dp"
+                app:strokeColor="@color/btn_stroke"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn2"
+                android:layout_width="0dp"
+                android:layout_height="68dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/btn_pink_num"
+                android:text="@string/btn_2"
+                android:textColor="@color/text_dark"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:cornerRadius="34dp"
+                app:elevation="6dp"
+                app:strokeColor="@color/btn_stroke"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn3"
+                android:layout_width="0dp"
+                android:layout_height="68dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/btn_pink_num"
+                android:text="@string/btn_3"
+                android:textColor="@color/text_dark"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:cornerRadius="34dp"
+                app:elevation="6dp"
+                app:strokeColor="@color/btn_stroke"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPlus"
+                android:layout_width="0dp"
+                android:layout_height="68dp"
+                android:backgroundTint="@color/btn_purple"
+                android:text="@string/btn_plus"
+                android:textColor="@color/text_dark"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:cornerRadius="34dp"
+                app:elevation="6dp"
+                app:strokeColor="@color/btn_stroke"
+                app:strokeWidth="1dp" />
+        </TableRow>
+
+        <!-- Row 5 -->
+        <TableRow>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn0"
+                android:layout_width="0dp"
+                android:layout_height="68dp"
+                android:layout_span="2"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/btn_pink_num"
+                android:text="@string/btn_0"
+                android:textColor="@color/text_dark"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:cornerRadius="34dp"
+                app:elevation="6dp"
+                app:strokeColor="@color/btn_stroke"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDot"
+                android:layout_width="0dp"
+                android:layout_height="68dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/btn_purple"
+                android:text="@string/btn_dot"
+                android:textColor="@color/text_dark"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:cornerRadius="34dp"
+                app:elevation="6dp"
+                app:strokeColor="@color/btn_stroke"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEqual"
+                android:layout_width="0dp"
+                android:layout_height="68dp"
+                android:backgroundTint="@color/btn_magenta"
+                android:text="@string/btn_equal"
+                android:textColor="@color/text_white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:cornerRadius="34dp"
+                app:elevation="8dp"
+                app:strokeColor="@color/btn_stroke"
+                app:strokeWidth="1dp" />
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
