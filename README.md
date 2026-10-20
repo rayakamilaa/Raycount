@@ -28,12 +28,11 @@ Aplikasi ini dikembangkan menggunakan **Kotlin** dan **XML Material Design Compo
 
 ## 📸 Tampilan Aplikasi (Screenshots)
 
+## 📸 Tampilan Aplikasi (Screenshots)
+
 | Splash Screen | Main Calculator | Discount Calculator | Currency Converter |
 | :---: | :---: | :---: | :---: |
-  | ![Splash Scree] (<img width="720" height="1520" alt="WhatsApp Image 2026-10-20 at 21 51 05" src="https://github.com/user-attachments/assets/537fd107-e7f2-4b8c-9667-88e27190776c" />)
- | ![Main Calculator] (<img width="720" height="1520" alt="WhatsApp Image 2026-10-20 at 21 51 06" src="https://github.com/user-attachments/assets/9300b4d3-02da-4f03-bcb1-6045eedc552d" />)
-| ![Discount Calculator] (<img width="720" height="1520" alt="WhatsApp Image 2026-10-20 at 21 51 07" src="https://github.com/user-attachments/assets/8621d541-28b0-448e-beb0-ccf717ce44d7" />)
- | ![Currency Converter] (<img width="720" height="1520" alt="WhatsApp Image 2026-10-20 at 21 51 07 (1)" src="https://github.com/user-attachments/assets/85a37c37-52a0-4eee-a032-163e929a2580" />)
+| <img src="https://github.com/user-attachments/assets/537fd107-e7f2-4b8c-9667-88e27190776c" width="180" alt="Splash Screen" /> | <img src="https://github.com/user-attachments/assets/9300b4d3-02da-4f03-bcb1-6045eedc552d" width="180" alt="Main Calculator" /> | <img src="https://github.com/user-attachments/assets/8621d541-28b0-448e-beb0-ccf717ce44d7" width="180" alt="Discount Calculator" /> | <img src="https://github.com/user-attachments/assets/85a37c37-52a0-4eee-a032-163e929a2580" width="180" alt="Currency Converter" /> |
 
 ---
 
