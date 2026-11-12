@@ -11,9 +11,9 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        // Delay 2 detik sebelum pindah otomatis ke MainActivity (Kalkulator)
+        // Delay 2 detik sebelum pindah otomatis ke AuthActivity (Halaman Login & Validasi)
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, AuthActivity::class.java)
             startActivity(intent)
             finish() // Menutup splash screen agar tidak bisa di-back
         }, 2000)
